@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Roguelike Hybrid Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game-canvas" width="960" height="640"></canvas>
+
+    <!-- HUD / Mobile controls -->
+    <div id="hud">
+      <div id="topbar">
+        <div id="credits">Créditos: OpenGameArt — veja README para autores</div>
+        <div id="status">HP: <span id="hp">100</span> | Moedas: <span id="coins">0</span></div>
+      </div>
+
+      <div id="left-controls">
+        <!-- Joystick area -->
+        <div id="joystick">
+          <div id="knob"></div>
+        </div>
+      </div>
+
+      <div id="right-controls">
+        <button id="btn-attack" class="control-btn">Atacar</button>
+        <button id="btn-inventory" class="control-btn">Inventário</button>
+      </div>
+
+      <div id="inventory-modal" class="modal hidden">
+        <h3>Inventário</h3>
+        <div id="inv-items"></div>
+        <button id="close-inv">Fechar</button>
+      </div>
+
+      <div id="combat-overlay" class="modal hidden">
+        <h3 id="combat-title">Combate</h3>
+        <div id="combat-log"></div>
+        <button id="combat-end" class="hidden">Sair</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
